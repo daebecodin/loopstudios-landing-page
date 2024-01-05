@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+    /* colors*/
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--dark-gray: hsl(0, 0%, 55%);
+--very-dark-gray: hsl(0, 0%, 41%);
+
+/* fonts*/
+--font-type-1: "Josefin Sans", sans-serif;
+--font-type-2: "Alata", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-type-1);
+}
+
+/* hero/header section*/
+header {
+    position: relative;
+    width: 100vw;
+}
+
+#mobile-hero {
+    width: 100%;
+    height: 100vh;
+}
+
+/* navbar section */
+#nav-bar {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+}
+
+#logo,
+#open,
+#close {
+    position: absolute;
+    z-index: 999;
+}
+
+#open {
+    display: block;
+}
+
+#logo {
+    top: 25px;
+    left: 15px;
+}
+
+#open,
+#close {
+    top: 30px;
+    right: 25px;
+    cursor: pointer;
+}
+ 
+#close {
+    display: none;
+}
+
+#nav-list {
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 50% 10%;
+    font-size: 2rem;
+    font-weight: 400;
+    list-style: none;
+    background-color: var(--black);
+    z-index: 998;
+    margin-top: -2000px;
+}
+
+.nav-item,
+.footer-nav > ul > li
+{
+    padding-bottom: 7px;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.nav-item a:link,
+.footer-nav > ul > li > a:link
+{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-item a:visited,
+.footer-nav > ul > li > a:visited
+{
+    color: var(--white);
+}
+
+.nav-item a:hover,
+.footer-nav > ul > li > a:hover
+{
+    color: lightgray;
+
+}
+
+.nav-item a:hover:before,
+.footer-nav > ul > li > a:hover:before
+{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+
+}
+
+/* header text*/
+
+#hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-weight: 300;
+    z-index: 997;
+  }
+
+/* interactive vr section */
+
+.vr,
+.creations-container {
+    text-align: center;
+    width: 85%;
+    margin: 50px auto;
+}
+
+#interactive-img {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 50px ;
+}
+
+.vr h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.7rem;
+}
+
+.vr p {
+    font-family: var(--font-type-2);
+    color: var(--dark-gray);
+    font-weight: 400;
+    opacity: .9;
+    line-height: 25px;
+}
+
+/* our creations section */
+
+.creations-container h2,
+.creation-name {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.creation-img {
+    width: 100%;
+    filter: brightness(75%);
+    transition: .5s;
+}
+
+.creation {
+    position: relative;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.creation-name {
+    position: absolute;
+    left: 25px;
+    bottom: -5px;
+    color: var(--white);
+    text-align: left;
+    transition: .5s;
+}
+
+.creation:hover .creation-img  {
+    opacity: .5;
+}
+
+.creation:hover .creation-name {
+    color: var(--black);
+    font-weight: bold;
+}
+
+#btn {
+    color: var(--black);
+    width: 140px;
+    height: 40px;
+    border: 1px solid var(--black);
+    font-weight: 400;
+    font-family: var(--font-type-2);
+    letter-spacing: .3rem;
+    background-color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#btn:hover {
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--white);
+}
+
+/* footer */
+
+footer {
+    color: var(--dark-gray);
+    text-align: center;
+    background-color: var(--black);
+}
+
+#footer-logo {
+    margin: 50px 0 30px;
+}
+
+.footer-nav {
+    margin-bottom: 50px;
+}
+
+.footer-nav > ul > li {
+    margin: 1rem 0;
+}
+
+#social-links {
+    margin-bottom: 20px;
+}
+
+#social-links > div {
+    margin: 0 10px;
+}
+
+#copyright {
+    padding-bottom: 50px;
+}
